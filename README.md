@@ -35,3 +35,9 @@ This layer handles real-time requests:
 * **Smart City Ready:** Entirely software-based and API-driven, making it easy to integrate into existing urban mobility apps or city planning dashboards.
 
 ---
+<details>
+  <summary>📸 Click here to see the image</summary>
+  
+![WhatsApp Image 2026-02-06 at 22 22 59](https://github.com/user-attachments/assets/75216754-4937-48e7-8f0a-b4b2d232e9f8)
+
+</details>
