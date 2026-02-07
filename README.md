@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+## 🛠 Methodology: A Step-Wise Approach
 
-# Run and deploy your AI Studio app
+To build a reliable and scalable parking predictor, we followed a structured 6-step engineering workflow:
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1NDx6xR86BBVPDUW8vt5SfnT_sptH1yIm
+### 1️⃣ Problem Identification
+Urban parking systems face inefficiencies due to unpredictable demand driven by time-based patterns, traffic congestion, location density, and nearby events. We identified that the primary pain point is *"The Search Time"*—the interval drivers spend circling blocks, which increases traffic load, fuel consumption, and environmental impact.
 
-## Run Locally
+### 2️⃣ Data Collection & Integration
+The system ingests and harmonizes multiple open-source data streams:
+* *Historical Data:* Longitudinal parking occupancy records.
+* *Geographic Data:* Zone-wise mapping and density.
+* *Temporal Data:* Granular logs (Hour/Day/Weekend status).
+* *External Factors:* Real-time traffic flow trends and public event schedules.
 
-**Prerequisites:**  Node.js
+### 3️⃣ Feature Engineering
+Raw data is transformed into "Predictive Signals" used by the AI:
+* *Demand Surges:* Identifying correlations between nearby events (festivals/office hours) and occupancy.
+* *Traffic Intensity:* Weighting predictions based on local road congestion levels.
+* *Cyclical Trends:* Normalizing data to account for recurring weekly patterns.
 
+### 4️⃣ AI Model Development
+At the core of the system is a machine learning ensemble.
+* *Model:* We utilize Regressors (like XGBoost or Random Forest) to learn non-linear patterns.
+* *Output:* The model produces *Zone-wise Availability Predictions* paired with *Confidence Scores* (e.g., "85% probability of a spot with High Confidence").
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 5️⃣ Prediction & Inference Layer
+This layer handles real-time requests:
+* *Near Real-Time Processing:* The model processes current inputs (Current Time + Traffic + Active Events).
+* *Probabilistic Mapping:* Instead of a binary "Yes/No," it provides a likelihood gradient across different city zones.
+
+### 6️⃣ Impact & Scalability
+* *Sustainability:* Minimizes vehicle circulation and lowers carbon emissions.
+* *Smart City Ready:* Entirely software-based and API-driven, making it easy to integrate into existing urban mobility apps or city planning dashboards.
