@@ -1,0 +1,9 @@
+{
+  "name": "Anuman Sthan",
+  "description": "AI-Powered Smart Parking Availability Predictor for Gandhinagar & Ahmedabad. Predicts real-time parking space availability using historical data and live event analysis.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
